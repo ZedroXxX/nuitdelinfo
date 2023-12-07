@@ -1,9 +1,8 @@
-
-
+import PageAccueil from "./Pages/PageAccueil.tsx";
 function App() {
   return (
     <div className="App">
-      < PageAcceuil />
+      < PageAccueil />
     </div>
   );
 }
