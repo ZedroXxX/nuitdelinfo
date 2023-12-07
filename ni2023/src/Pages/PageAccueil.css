@@ -1,0 +1,47 @@
+/* Fichier CSS pour styliser le composant PageAccueil */
+
+body {
+    font-family: 'Yeseva One', cursive;
+  }
+  
+  .pageAccueil {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .pageTitle {
+    color: #007BFF;
+  }
+.pageAccueil {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .pageTitle {
+    color: #007BFF;
+  }
+  
+  .sectionContainer {
+    margin-bottom: 30px;
+  }
+  
+  .sectionTitle {
+    color: #007BFF;
+  }
+  
+  .sectionContent {
+    color: #333;
+  }
+  
+  .footerLink {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .footerLink:hover {
+    text-decoration: underline;
+  }
+  
