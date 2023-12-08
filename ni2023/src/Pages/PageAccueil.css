@@ -1,55 +1,164 @@
-/* PageAccueil.css */
-
-body {
-  font-family: 'Yeseva One', cursive; /* Utilisation de la police Yeseva One ou une police similaire */
+/* Reset some default styles */
+* {
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4; /* Couleur de fond */
-  color: #333; /* Couleur du texte */
+  box-sizing: border-box;
 }
 
-.pageAccueil {
-  max-width: 800px;
+/* Global styles */
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: repeating-radial-gradient(
+    circle at 20% 20%,
+    #ffcccb,
+    #ffcccb 10px,
+    #ffd700 10px,
+    #ffd700 20px
+  );
+  color: #ff69b4;
+}
+
+.container {
+  max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
 }
 
+/* PageAccueil styles */
+.pageAccueil {
+  text-align: center;
+}
+
+/* Navigation buttons */
+button {
+  padding: 20px 40px;
+  margin: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  background: linear-gradient(to right, #87CEEB, #00BFFF);
+  color: #ffffff;
+  border: 5px solid #00BFFF;
+  border-radius: 30px;
+  box-shadow: 10px 10px 30px #4682b4;
+  transition: background 0.5s ease;
+}
+
+button:hover {
+  background: linear-gradient(to right, #00BFFF, #87CEEB);
+  color: #ff69b4;
+  transform: scale(1.1);
+}
+
+/* Banner styles */
+.banner {
+  margin: 40px 0;
+}
+
 .banner img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px; /* Coins arrondis pour l'image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  max-width: 100%;
+  border-radius: 50% 50% 0 0;
+  box-shadow: 0 0 20px #ff1493, 0 0 40px #ff1493, 0 0 60px #ff1493;
 }
 
+/* Page title styles */
 .pageTitle {
-  color: #007BFF; /* Couleur du titre accrocheur */
+  font-size: 60px;
+  margin: 40px 0;
+  color: #ff1493;
+  text-shadow: 3px 3px 5px #87cefa;
 }
 
+/* Introduction text styles */
 .introText {
-  font-size: 1.2em;
-  margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 60px;
 }
 
+/* Monthly challenge styles */
 .monthlyChallenge {
-  background-color: #fff; /* Couleur de fond de la section du défi mensuel */
-  padding: 15px;
-  margin-top: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+  margin-bottom: 80px;
 }
 
 .monthlyChallenge h2 {
-  color: #007BFF;
+  font-size: 40px;
+  color: #ff69b4;
+  text-decoration: underline;
 }
 
 .ctaLink {
   display: inline-block;
-  padding: 10px 15px;
-  background-color: #007BFF;
-  color: #fff;
+  padding: 20px 40px;
+  background: linear-gradient(to right, #ff1493, #87cefa);
+  color: #ffffff;
   text-decoration: none;
-  border-radius: 4px;
-  margin-top: 10px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 20px #ff69b4;
+  transition: background 0.5s ease;
 }
 
-/* Ajoutez des styles similaires pour les autres sections en fonction de vos besoins */
+.ctaLink:hover {
+  background: linear-gradient(to right, #87cefa, #ff1493);
+  color: #ffffff;
+  transform: rotate(10deg);
+}
+
+/* Other section styles can be added similarly */
+
+/* Footer styles */
+footer {
+  margin-top: 60px;
+  padding: 30px 0;
+  background: linear-gradient(to right, #87CEEB, #00BFFF);
+  color: #ffffff;
+  text-align: center;
+  border-top: 5px solid #ff69b4;
+  border-radius: 0 0 30px 30px;
+}
+
+.quickLink {
+  display: inline-block;
+  margin: 0 30px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.quickLink:hover {
+  text-decoration: underline;
+}
+
+@keyframes epilepsy {
+  from {
+    background: red;
+    color: blue;
+  }
+
+  to {
+    background: blue;
+    color: red;
+  }
+}
+
+.default {
+  padding: 20px;
+  text-align: center;
+  animation-duration: 0.1s;
+  animation-name: epilepsy;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes rotateText {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotating-text {
+  display: inline-block;
+  font-size: 24px;
+  animation: rotateText 5s linear infinite;
+}
