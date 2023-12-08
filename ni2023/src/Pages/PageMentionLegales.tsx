@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './PageAccueil.css';
+
 function PageMesures ({redirection}:any) {
 
     return (
@@ -10,5 +10,5 @@ function PageMesures ({redirection}:any) {
     );
   }
 
- 
+
 export default PageMesures;
