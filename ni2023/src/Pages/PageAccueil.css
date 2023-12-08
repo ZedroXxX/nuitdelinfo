@@ -1,47 +1,55 @@
-/* Fichier CSS pour styliser le composant PageAccueil */
+/* PageAccueil.css */
 
 body {
-    font-family: 'Yeseva One', cursive;
-  }
-  
-  .pageAccueil {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .pageTitle {
-    color: #007BFF;
-  }
+  font-family: 'Yeseva One', cursive; /* Utilisation de la police Yeseva One ou une police similaire */
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Couleur de fond */
+  color: #333; /* Couleur du texte */
+}
+
 .pageAccueil {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .pageTitle {
-    color: #007BFF;
-  }
-  
-  .sectionContainer {
-    margin-bottom: 30px;
-  }
-  
-  .sectionTitle {
-    color: #007BFF;
-  }
-  
-  .sectionContent {
-    color: #333;
-  }
-  
-  .footerLink {
-    color: #007BFF;
-    text-decoration: none;
-  }
-  
-  .footerLink:hover {
-    text-decoration: underline;
-  }
-  
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Coins arrondis pour l'image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.pageTitle {
+  color: #007BFF; /* Couleur du titre accrocheur */
+}
+
+.introText {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.monthlyChallenge {
+  background-color: #fff; /* Couleur de fond de la section du défi mensuel */
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.monthlyChallenge h2 {
+  color: #007BFF;
+}
+
+.ctaLink {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+/* Ajoutez des styles similaires pour les autres sections en fonction de vos besoins */
