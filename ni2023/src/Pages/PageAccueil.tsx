@@ -1,21 +1,42 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PageContact from './PageContact.tsx';
+import PageMesures from './PageMesures.tsx';
+import PageIdeesRecu from './PageIdeesRecu.tsx';
+import PageActionIndividuel from './PageActionIndividuel.tsx';
+import { useState } from 'react';
+
 import './PageAccueil.css';
 
-class PageAccueil extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      nomDuDefi: "Énergie Sans Frontières",
-    };
-  }
 
-  render() {
+
+ function PageAccueil() {
+    
+
+  const [redirection, setRedirection] = useState(1);
+  const i = require('./images/image.png');
+{redirection === 1 && <PageContact redirection={setRedirection} />};
+{redirection === 2 && <PageMesures redirection={setRedirection} />};
+{redirection === 3 && <PageIdeesRecu redirection={setRedirection} />};
+{redirection === 4 && <PageActionIndividuel redirection={setRedirection} />};
     return (
+
+      
+  
+
+     
       <div className="pageAccueil">
         {/* Bannière Visuelle Impactante */}
+
+
+          <button onClick={() => setRedirection(1)}>Contact</button>
+          <button onClick={() => setRedirection(2)}>Mesures</button>
+          <button onClick={() => setRedirection(3)}>Défis</button>
+          <button onClick={() => setRedirection(4)}>Idées Reçues</button>
+      
+
         <div className="banner">
         <img src="lien_vers_image_ou_animation" alt="" />
-
+        <p className="default">ptite dingz</p>
         </div>
 
         {/* Titre Accrocheur */}
@@ -27,30 +48,29 @@ class PageAccueil extends Component {
         {/* Défi Écologique Mensuel */}
         <section className="monthlyChallenge">
           <h2>Défi Écologique du Mois :</h2>
-          <p>{this.state.nomDuDefi}</p>
           <a href="#defi" className="ctaLink">Participer</a>
         </section>
 
         {/* Section Actions Individuelles */}
-        <section className="individualActions">
+        <section className="rotating-text">
           <h2>Actions Individuelles :</h2>
           <p>Explorez des actions quotidiennes pour réduire votre empreinte carbone. Chaque geste compte ! <a href="#actions">Découvrir les Actions</a></p>
         </section>
 
         {/* Déconstruction des Idées Reçues */}
-        <section className="mythBusting">
+        <section className="rotating-text">
           <h2>Déconstruction des Idées Reçues :</h2>
           <p>Démystifions les mythes environnementaux ! Apprenez la vérité sur les changements climatiques et les solutions. <a href="#verite">Découvrir la Vérité</a></p>
         </section>
-
+        <img src={i} alt="seedit" />
         {/* Solutions Politiques */}
-        <section className="politicalSolutions">
+        <section className="rotating-text">
           <h2>Solutions Politiques :</h2>
           <p>Découvrez comment les politiques en cours contribuent à un avenir durable. <a href="#politiques">En Savoir Plus</a></p>
         </section>
 
         {/* Appel à l'Action */}
-        <section className="callToAction">
+        <section className="rotating-text">
           <h2>Appel à l'Action :</h2>
           <p>Rejoignez-nous dans la lutte contre le changement climatique. Ensemble, nous pouvons créer un avenir positif ! <a href="#commencer">Commencer</a></p>
         </section>
@@ -75,7 +95,5 @@ class PageAccueil extends Component {
         </footer>
       </div>
     );
-  }
-}
-
+    }
 export default PageAccueil;
