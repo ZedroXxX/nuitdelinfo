@@ -1,18 +1,38 @@
 import React, { Component } from 'react';
+import PageContact from './PageContact.tsx';
+import PageMesures from './PageMesures.tsx';
+import PageIdeesRecu from './PageIdeesRecu.tsx';
+import PageActionIndividuel from './PageActionIndividuel.tsx';
+import { useState } from 'react';
 import './PageAccueil.css';
 
-class PageAccueil extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      nomDuDefi: "Énergie Sans Frontières",
-    };
-  }
 
-  render() {
+
+ function PageAccueil() {
+    
+
+  const [redirection, setRedirection] = useState(1);
+
+{redirection === 1 && <PageContact redirection={setRedirection} />};
+{redirection === 2 && <PageMesures redirection={setRedirection} />};
+{redirection === 3 && <PageIdeesRecu redirection={setRedirection} />};
+{redirection === 4 && <PageActionIndividuel redirection={setRedirection} />};
     return (
+
+      
+  
+
+     
       <div className="pageAccueil">
         {/* Bannière Visuelle Impactante */}
+
+   
+          <button onClick={() => setRedirection(1)}>Contact</button>
+          <button onClick={() => setRedirection(2)}>Mesures</button>
+          <button onClick={() => setRedirection(3)}>Défis</button>
+          <button onClick={() => setRedirection(4)}>Idées Reçues</button>
+      
+
         <div className="banner">
         <img src="lien_vers_image_ou_animation" alt="" />
 
@@ -27,7 +47,6 @@ class PageAccueil extends Component {
         {/* Défi Écologique Mensuel */}
         <section className="monthlyChallenge">
           <h2>Défi Écologique du Mois :</h2>
-          <p>{this.state.nomDuDefi}</p>
           <a href="#defi" className="ctaLink">Participer</a>
         </section>
 
@@ -75,7 +94,5 @@ class PageAccueil extends Component {
         </footer>
       </div>
     );
-  }
-}
-
+    }
 export default PageAccueil;

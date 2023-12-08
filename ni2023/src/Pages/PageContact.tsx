@@ -1,10 +1,9 @@
 import React from 'react';
-
-function PageContact({ redirection }) {
+import './PageAccueil.css';
+function PageContact({ redirection }: any) {
   return (
     <div className="PageContact">
-      {/* Your content here */}
-      azeazea
+    azdqz
     </div>
   );
 }
